@@ -1,3 +1,7 @@
+# These outputs are commonly used to make important information accessible after
+# infrastructure is deployed, especially when further actions or configurations
+# depend on these values. 
+
 output "instance_id" {
   description = "ID of the EC2 instance"
   value       = aws_instance.app_server.id

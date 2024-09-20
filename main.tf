@@ -1,3 +1,6 @@
+# This main.tf file sets up a complete networking environment for
+# hosting an EC2 instance accessible over HTTP.
+
 # Provider Block
 provider "aws" {
   profile = "default"

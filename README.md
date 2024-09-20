@@ -141,3 +141,6 @@ terraform apply
 terraform output
 ```
 
+
+### Sensitive Information
+Always use secure methods such as environment variables, secrets management services (like AWS Secrets Manager or HashiCorp Vault), or encrypted storage solutions.

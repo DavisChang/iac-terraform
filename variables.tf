@@ -1,3 +1,7 @@
+# These variables are used in Terraform configurations to dynamically set values
+# when creating AWS resources, making your configurations more flexible and easier 
+# to manage.
+
 variable "instance_name" {
   description = "Value of the Name tag for the EC2 instance"
   type        = string
