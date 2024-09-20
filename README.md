@@ -88,3 +88,56 @@ Deploy to AWS
 
 terraform apply
 ```
+
+![apply](images/apply.png)
+
+![apply2](images/apply2.png)
+
+![apply3](images/apply3.png)
+
+![after apply](images/afterApply.png)
+
+
+Get ride of instances
+
+``` bash
+terraform destroy
+```
+
+Override default value
+
+```bash
+terraform apply -var "instance_name=MyNewNameEC2"
+```
+
+Variable file (terraform.tfvars) can replace default variable.
+
+```tf
+# EC2
+ec2_instance_type = "t2.micro"
+instance_name     = "MyInstanceNameFromFile"
+
+```
+
+### Output Data
+
+```tf
+output "instance_id" {
+  description = "ID of the EC2 instance"
+  value       = aws_instance.app_server.id
+}
+
+output "instance_public_ip" {
+  description = "Public IP address of the EC2 instance"
+  value       = aws_instance.app_server.public_ip
+}
+
+```
+
+![output](images/output.png)
+
+```bash
+terraform apply
+terraform output
+```
+

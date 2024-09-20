@@ -8,9 +8,9 @@ provider "aws" {
 # "aws_instance - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance
 resource "aws_instance" "app_server" {
   ami           = "ami-008789001adc98s83"
-  instance_type = "t2.micro"
+  instance_type = var.ec2_instance_type
 
   tags = {
-    Name = "myTerraformInstance"
+    Name = var.instance_name
   }
 }
